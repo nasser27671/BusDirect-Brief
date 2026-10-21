@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BusDirect</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </head>
 <body class="bg-gray-100 p-6 flex justify-start">
 
@@ -64,12 +64,13 @@
 
 </div>
 
-<div class="bg-red-800 p-6 rounded-lg shadow-lg flex flex-col align-top">
-  <div class="div"><p class="font-bold underline px-8">ADDITION D'UNE RESERVATION:</p></div>
-  <div class="di"><h2 class="font-bold">Prénom:</h2></div>
-  <div class="div">
-    <form>
-      <input type="text"placeholder="Saisir votre prénom:">
+<div class="bg-yellow-400 p-6 rounded-lg shadow-lg flex flex-col align-top">
+  <div><p class="font-bold underline px-8">ADDITION D'UNE RESERVATION:</p></div>
+  <div><h2 class="font-bold">Prénom:</h2></div>
+  <div class="addition">
+    <form id="form">
+      <input data-type="name" type="text" placeholder="Saisir votre prénom:">
+      <span id="nameError"></span>
       <select>
         <option>1</option>
         <option>2</option>
@@ -94,13 +95,11 @@
 
       </select>
       <button class="bg-blue-950 rounded-3xl">Reserver mon siege</button>
-      </form>
       <p class="font-bold underline px-8">MODIFICATION DU RESERVATION:</p>
       <p class="font-bold underline px-8">SUPPRESION D'UNE RESERVATION:</p>
       <h2 class="font-bold">Prénom:</h2>
-      <form>
-        <input type="text" placeholder="Sasir votre prénom:">
-        <button class="bg-blue-950 rounded-3xl">Supprimer mon reservation</button>
+        <input id="name" data-type="name" type="text" placeholder="Sasir votre prénom:">
+        <button class="bg-blue-950 rounded-3xl flex float-end m-1">Supprimer mon reservation</button>
       </form>
 
 

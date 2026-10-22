@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BusDirect</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="script.js"></script>
 </head>
 <body class="bg-gray-100 p-6 flex justify-start">
 
@@ -24,16 +23,16 @@
 <div>
 <p class="text-sm font-semibold text-blue-500 mb-2 underline">Rangée 1</p>
 <div class="grid grid-cols-5 gap-2">
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">1</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">2</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">3</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">4</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">5</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">6</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">7</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">8</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">9</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">10</div>
+<div id="seat-1" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">1</div>
+<div id="seat-2" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">2</div>
+<div id="seat-3" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">3</div>
+<div id="seat-4" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">4</div>
+<div id="seat-5" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">5</div>
+<div id="seat-6" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">6</div>
+<div id="seat-7" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">7</div>
+<div id="seat-8" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">8</div>
+<div id="seat-9" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">9</div>
+<div id="seat-10" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">10</div>
 </div>
 </div>
 
@@ -42,36 +41,41 @@
 <div>
 <p class="text-sm font-semibold text-blue-500 mb-2 underline">Rangée 2</p>
 <div class="grid grid-cols-5 gap-2">
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">11</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">12</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">13</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">14</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">15</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">16</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">17</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">18</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">19</div>
-<div class="bg-gray-300 text-white font-semibold py-2 rounded text-center">20</div>
+<div id="seat-11" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">11</div>
+<div id="seat-12" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">12</div>
+<div id="seat-13" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">13</div>
+<div id="seat-14" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">14</div>
+<div id="seat-15" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">15</div>
+<div id="seat-16" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">16</div>
+<div id="seat-17" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">17</div>
+<div id="seat-18" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">18</div>
+<div id="seat-19" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">19</div>
+<div id="seat-20" class="bg-gray-300 text-white font-semibold py-2 rounded text-center">20</div>
 </div>
 </div>
 
-
-
-
-</div>
 
 </div>
 
 </div>
 
 <div class="bg-yellow-400 p-6 rounded-lg shadow-lg flex flex-col align-top">
-  <div><p class="font-bold underline px-8">ADDITION D'UNE RESERVATION:</p></div>
-  <div><h2 class="font-bold">Prénom:</h2></div>
+
+  <div>
+    <p class="font-bold underline px-8">ADDITION D'UNE RESERVATION:</p>
+  </div>
+
+  <div>
+    <h2 class="font-bold">Prénom:</h2>
+  </div>
+
   <div class="addition">
-    <form id="form">
-      <input data-type="name" type="text" placeholder="Saisir votre prénom:">
+
+      <input id="reservation-name" data-type="name" type="text" placeholder="Saisir votre prénom:">
+
       <span id="nameError"></span>
-      <select>
+
+      <select id="seat-number">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -92,18 +96,25 @@
         <option>18</option>
         <option>19</option>
         <option>20</option>
-
       </select>
-      <button class="bg-blue-950 rounded-3xl">Reserver mon siege</button>
-      <p class="font-bold underline px-8">MODIFICATION DU RESERVATION:</p>
-      <p class="font-bold underline px-8">SUPPRESION D'UNE RESERVATION:</p>
-      <h2 class="font-bold">Prénom:</h2>
-        <input id="name" data-type="name" type="text" placeholder="Sasir votre prénom:">
-        <button class="bg-blue-950 rounded-3xl flex float-end m-1">Supprimer mon reservation</button>
-      </form>
 
+      <button id="submit-button" type="button" class="bg-blue-950 rounded-3xl">Reserver mon siege</button>
+
+      <p class="font-bold underline px-8">MODIFICATION DU RESERVATION:</p>
+
+      <p class="font-bold underline px-8">SUPPRESION D'UNE RESERVATION:</p>
+
+      <h2 class="font-bold">Prénom:</h2>
+
+      <input id="name" data-type="name" type="text" placeholder="Sasir votre prénom:">
+
+      <button class="bg-blue-950 rounded-3xl flex float-end m-1">Supprimer mon reservation</button>
 
   </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

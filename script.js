@@ -16,6 +16,7 @@ if (submitButton) {
             selectedSeat.style.backgroundColor = "#c60000";
             nameText.style.fontSize = "10px";
             selectedSeat.appendChild(nameText);
+            localStorage.setItem("Data", JSON.stringify({name,seat}))
         }
     });
 }

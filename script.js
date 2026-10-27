@@ -44,7 +44,7 @@ function displayReservations() {
     const option1 = document.createElement("option");
 
     option1.value = reservations[i].seat;
-    option1.textContent = reservations[i].name + " - Siège " + reservations[i].seat;
+    option1.textContent = reservations[i].name + " - Siège " + reservations[i]._;
 
     modifySeat.appendChild(option1);
 
